@@ -1,0 +1,31 @@
+{
+    "name": "oxid-esales/vcms-examples",
+    "description": "This module contains examples for vcmsmodule.",
+    "type": "oxideshop-module",
+    "keywords": [
+        "oxid",
+        "modules",
+        "eShop"
+    ],
+    "homepage":    "https://www.oxid-esales.com/",
+    "license":     [
+        "proprietary"
+    ],
+    "autoload": {
+        "psr-4": {
+            "OxidEsales\\VcmsExamples\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "OXID eSales",
+            "email": "info@oxid-esales.com"
+        }
+    ],
+    "require":     {
+        "php": ">=8.1",
+        "ddoe/visualcms-module": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

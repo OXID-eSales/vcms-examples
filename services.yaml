@@ -1,0 +1,21 @@
+services:
+
+  _defaults:
+    public: false
+    autowire: true
+
+  OxidEsales\VcmsExamples\ShortCode\GoogleMap:
+    class: OxidEsales\VcmsExamples\ShortCode\GoogleMap
+    tags: [ 'visualcms.shortcode.tag.twig' ]
+
+  OxidEsales\VisualCmsModule\ShortCode\Text:
+    class: OxidEsales\VcmsExamples\ShortCode\Text
+    tags: [ 'visualcms.shortcode.tag.twig' ]
+
+  OxidEsales\VcmsExamples\Views\Twig\Shortcodes\Column:
+    class: OxidEsales\VisualCmsModule\DataType\ThemeTemplatesConfiguration
+    arguments:
+      $themeId: 'apex'
+      $templates:
+        column: '@@oe_vcmsexamples/shortcodes/vcmsexamples_shortcode_column'
+    tags: [ 'shortcode.themeTemplates' ]

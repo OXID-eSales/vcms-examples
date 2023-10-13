@@ -1,0 +1,6 @@
+<div class="clearfix dd-shortcode-{{ shortcode }}{% if class %} {{ class }}{% endif %}">
+    {% if link %}
+        <iframe src="{{ link }}" width="{% if width %}{{ width }}{% else %}600{% endif %}" height="{% if height %}{{ height }}{% else %}450{% endif %}" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    {% endif %}
+</div>

@@ -1,2 +1,2 @@
 # vcms-examples
-COntains examples for visualcms
+Contains examples for visualcms
