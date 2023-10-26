@@ -7,13 +7,14 @@
         "modules",
         "eShop"
     ],
-    "homepage":    "https://www.oxid-esales.com/",
-    "license":     [
+    "homepage": "https://www.oxid-esales.com/",
+    "license": [
         "proprietary"
     ],
     "autoload": {
         "psr-4": {
-            "OxidEsales\\VcmsExamples\\": "src/"
+            "OxidEsales\\VcmsExamples\\": "./src",
+            "OxidEsales\\VcmsExamples\\Tests\\": "./tests"
         }
     },
     "authors": [
@@ -22,10 +23,34 @@
             "email": "info@oxid-esales.com"
         }
     ],
-    "require":     {
+    "require": {
         "php": ">=8.1",
         "ddoe/visualcms-module": "*"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "prefer-dist": true,
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*",
+        "phpstan/phpstan": "^1.8.11",
+        "phpunit/phpunit": "^9.6",
+        "oxid-esales/oxideshop-ce": "dev-b-7.0.x"
+    },
+    "scripts": {
+        "phpcs": "phpcs --standard=tests/phpcs.xml",
+        "phpcbf": "phpcbf --standard=tests/phpcs.xml",
+        "phpstan": "phpstan -ctests/PhpStan/phpstan.neon analyse src/",
+        "phpstan-report": "phpstan -ctests/PhpStan/phpstan.neon analyse src/ --error-format=json > phpstan.report.json",
+        "static": [
+            "@phpcs",
+            "@phpstan"
+        ],
+        "codeception": "THEME_ID=apex MODULE_IDS=ddoemedialibrary,ddoewysiwyg,ddoevisualcms,oe_vcmsexamples /var/www/vendor/bin/codecept run acceptance -c /var/www/vendor/oxid-esales/vcms-examples/tests/codeception.yml"
+    },
+    "config": {
+        "allow-plugins": {
+            "oxid-esales/oxideshop-composer-plugin": true,
+            "oxid-esales/oxideshop-unified-namespace-generator": true
+        }
+    }
 }
