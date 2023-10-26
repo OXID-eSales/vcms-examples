@@ -14,17 +14,13 @@ class Text extends TextParent
 {
 	protected string $template = '@oe_vcmsexamples/shortcodes/vcmsexamples_shortcode_text';
 
-	public function setInterfaceOptions(): void
-	{
-		$oLang = Registry::getLang();
-		parent::setInterfaceOptions();
+    public function setOptions(array $options): void
+    {
+        $shopLanguage = Registry::getLang();
+        $options['heading'] = new TextOption(
+            label: $shopLanguage->translateString('SHOP_MODULE_oevcmsexamples_TextWidget_Heading')
+        );
 
-		$this->setOptions([
-			...$this->getOptions(),
-			'heading' => new TextOption(
-				label: $oLang->translateString('SHOP_MODULE_oevcmsexamples_TextWidget_Heading')
-			)
-		]);
-	}
-
+        parent::setOptions($options);
+    }
 }
