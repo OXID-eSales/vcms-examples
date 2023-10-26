@@ -12,7 +12,7 @@ services:
     class: OxidEsales\VcmsExamples\ShortCode\Text
     tags: [ 'visualcms.shortcode.tag.twig' ]
 
-  OxidEsales\VcmsExamples\Views\Twig\Shortcodes\Column:
+  vcmsTemplateOverrideForApexTheme:
     class: OxidEsales\VisualCmsModule\DataType\ThemeTemplatesConfiguration
     arguments:
       $themeId: 'apex'
