@@ -100,6 +100,6 @@ class DecorationExample implements ShortCodeInterface
 
     public function prepareTemplateParams(string $content, array $params): array
     {
-        return $this->prepareTemplateParams($content, $params);
+        return $this->actionShortcode->prepareTemplateParams($content, $params);
     }
 }
