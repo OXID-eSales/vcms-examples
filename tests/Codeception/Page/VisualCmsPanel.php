@@ -9,12 +9,11 @@ declare(strict_types=1);
 
 namespace OxidEsales\VcmsExamples\Tests\Codeception\Page;
 
-use Facebook\WebDriver\WebDriverKeys;
-use OxidEsales\Codeception\Admin\Component\AdminMenu;
 use OxidEsales\Codeception\Module\Translation\Translator;
 use OxidEsales\Codeception\Page\Page;
 use OxidEsales\VcmsExamples\Tests\Codeception\Page\Widget\BaseWidget;
 use OxidEsales\VcmsExamples\Tests\Codeception\Step\AdminAcceptanceTester;
+use OxidEsales\VcmsExamples\Tests\Codeception\Page\Widget\ColumnWidget;
 
 class VisualCmsPanel extends Page
 {
@@ -36,6 +35,9 @@ class VisualCmsPanel extends Page
     private $addWidgetButton = "//a[@class='dd-veditor-widget-action']";
 
     public $previewHolder = "//body[contains(@class, 'cl-ddoevisualcmspreview')]";
+
+    public $addColumn = ".dd-veditor-column-action";
+
     public function openVisualCms(): self
     {
         /** @var AdminAcceptanceTester $I */
@@ -156,5 +158,15 @@ class VisualCmsPanel extends Page
         $I->click(Translator::translate($label));
 
         return $widget;
+    }
+
+    public function addColumn()
+    {
+        /** @var AdminAcceptanceTester $I */
+        $I = $this->user;
+
+        $I->click($this->addColumn);
+
+        return new ColumnWidget($I);
     }
 }
