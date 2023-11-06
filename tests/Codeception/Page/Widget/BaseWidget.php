@@ -45,16 +45,4 @@ abstract class BaseWidget
         return $this;
     }
 
-    /**
-     * @param string|array<string, string> $selector
-     */
-    protected function getSelectorByTheme($selector): string
-    {
-        return is_array($selector) ? $selector[$this->getTheme()] : $selector;
-    }
-
-    protected function getTheme(): string
-    {
-        return getenv('THEME_ID') ?: 'apex';
-    }
 }

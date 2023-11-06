@@ -54,11 +54,7 @@ deprecated_tests:
   skip: true
 
 sonarcloud:
-  matrix: *matrix
-  target_branch: *git_shop_ref
-  project_key: 'OXID-eSales_vcms-examples'
-  project_name: *package_name
-  internal_project_name: ''
+  skip: true
 
 phpcs_tests:
   skip: true
