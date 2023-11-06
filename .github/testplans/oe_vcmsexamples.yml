@@ -6,6 +6,7 @@ workflow:
     # currently, only twig works for oe_vcmsexamples template_engine: &template_engine '["smarty","twig"]'
 
 global:
+  is_enterprise: &is_enterprise true
   git: &git
     shop_ref: &git_shop_ref b-7.0.x
     enterprise_ref: &git_enterprise_ref 'b-7.0.x'
@@ -66,4 +67,4 @@ styles:
 
 finish:
   matrix: *matrix
-  slack_title: 'Module oe_vcmsexamples CE on {{ .Github.Repository }} by {{ .Github.Actor }}'
+  slack_title: 'Module oe_vcmsexamples EE on {{ .Github.Repository }} by {{ .Github.Actor }}'
