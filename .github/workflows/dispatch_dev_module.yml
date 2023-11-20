@@ -8,7 +8,7 @@ on:
         type: string
         required: true
         description: 'URL/PATH of the testplan to run'
-        default: 'https://raw.githubusercontent.com/OXID-eSales/vcms-examples/b-7.1.x/.github/testplans/oe_vcmsexamples.yml'
+        default: 'https://raw.githubusercontent.com/OXID-eSales/github-actions/v0/testplans/7.1.x.yml,https://raw.githubusercontent.com/OXID-eSales/vcms-examples/b-7.1.x-add-github-actions-OXDEV-7538/tests/github_actions/oe_vcmsexamples.yml'
       runs_on:
         type: string
         description: 'JSON string/array describing the runner'
@@ -17,7 +17,7 @@ on:
 
 jobs:
   call_matrix:
-    uses: oxid-eSales/github-actions/.github/workflows/call-test_matrix.yml@v0
+    uses: oxid-eSales/github-actions/.github/workflows/call-universal_test_workflow.yml@v0
     with:
       testplan: ${{ inputs.testplan }}
       runs_on: ${{ inputs.runs_on }}
