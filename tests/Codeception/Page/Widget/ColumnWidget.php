@@ -15,7 +15,9 @@ use OxidEsales\VcmsExamples\Tests\Codeception\Step\AdminAcceptanceTester;
 class ColumnWidget
 {
     private $widgetShortCodeClass = "(//div[@class='dd-ve-content'] //div[contains(@class, 'dd-shortcode-column')])";
-    private $widgetAdditionalClass = "(//div[@class='dd-ve-content'] //div[contains(@class, 'prefix-class')])";
+	// @codingStandardsIgnoreStart
+	private $widgetAdditionalClass = "(//div[@class='dd-ve-content'] //div[@class='overriding-template-example'] //div[contains(@class, 'dd-shortcode-column')])";
+	// @codingStandardsIgnoreEnd
     private Actor $user;
 
     public function __construct(Actor $I)
