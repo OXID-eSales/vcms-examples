@@ -65,7 +65,7 @@ final class TextWidgetCest
 
         //Open page in frontend
         $I->amOnPage('/text-widget');
-        $I->dontSeeElement($visualCmsPanel->previewHolder);
+        $I->dontSeeInTitle($visualCmsPanel->inTitle);
         $I->see($cmsTitle);
 
         foreach ($widgetsData as $index => $widgetData) {

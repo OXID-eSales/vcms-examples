@@ -53,7 +53,7 @@ final class GoogleMapWidgetCest
 
         //Open page in frontend
         $I->amOnPage('/google-map-widget');
-        $I->dontSeeElement($visualCmsPanel->previewHolder);
+        $I->dontSeeInTitle($visualCmsPanel->inTitle);
         $I->see($cmsTitle);
 
         $widget->seeWidgetLink($widgetData['link']);

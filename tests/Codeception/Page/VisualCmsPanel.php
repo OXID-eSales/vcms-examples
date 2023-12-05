@@ -34,8 +34,7 @@ class VisualCmsPanel extends Page
 
     private $addWidgetButton = "//a[@class='dd-veditor-widget-action']";
 
-    public $previewHolder = "//body[contains(@class, 'cl-ddoevisualcmspreview')]";
-
+    public $inTitle = "[PREVIEW]";
     public $addColumn = ".dd-veditor-column-action";
 
     public function openVisualCms(): self
@@ -131,10 +130,10 @@ class VisualCmsPanel extends Page
         $I->wait(2);
         $I->waitForPageLoad();
 
-        $I->amOnPage("/index.php?cl=ddoevisualcmspreview&id=" . $id . "&force_sid=" . $sid);
+        $I->amOnPage("/index.php?cl=content&fnc=preview&cid=" . $id . "&force_sid=" . $sid);
         $I->waitForPageLoad();
 
-        $I->seeElement($this->previewHolder);
+        $I->seeInTitle($this->inTitle);
         $I->seeElement("//article[contains(@class, 'cmsContent')]");
 
         return $this;

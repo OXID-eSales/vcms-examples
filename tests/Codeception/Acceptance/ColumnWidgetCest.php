@@ -30,7 +30,7 @@ final class ColumnWidgetCest
 
         //Open page in frontend
         $I->amOnPage('/column-widget');
-        $I->dontSeeElement($visualCmsPanel->previewHolder);
+        $I->dontSeeInTitle($visualCmsPanel->inTitle);
         $I->see($cmsTitle);
 
         $textWidget = new ColumnWidget($I);

@@ -44,5 +44,4 @@ abstract class BaseWidget
 
         return $this;
     }
-
 }
