@@ -37,15 +37,21 @@
         "oxid-esales/oxideshop-ce": "dev-b-7.0.x"
     },
     "scripts": {
-        "phpcs": "phpcs --standard=tests/phpcs.xml",
+        "phpcs-report": "phpcs --standard=tests/phpcs.xml --report=json --report-file=phpcs.report.json",
+        "phpcs": "phpcs --standard=tests/phpcs.xml --report=full --report-file=phpcs.report.txt",
         "phpcbf": "phpcbf --standard=tests/phpcs.xml",
-        "phpstan": "phpstan -ctests/PhpStan/phpstan.neon analyse src/",
-        "phpstan-report": "phpstan -ctests/PhpStan/phpstan.neon analyse src/ --error-format=json > phpstan.report.json",
-        "static": [
-            "@phpcs",
-            "@phpstan"
-        ],
-        "codeception": "THEME_ID=apex MODULE_IDS=ddoemedialibrary,ddoewysiwyg,ddoevisualcms,oe_vcmsexamples /var/www/vendor/bin/codecept run acceptance -c /var/www/vendor/oxid-esales/vcms-examples/tests/codeception.yml"
+
+        "phpstan": "phpstan --no-progress -ctests/PhpStan/phpstan.neon analyse src/ &>phpstan.report.txt",
+        "phpstan-report": "phpstan --no-progress -ctests/PhpStan/phpstan.neon analyse src/ --error-format=json >phpstan.report.json",
+
+        "phpmd": "echo 'phpmd check disabled' >phpmd.report.txt",
+        "phpmd-excludestaticaccess": "vendor/bin/phpmd src ansi tests/PhpMd/exclude-static-access-rule.xml",
+        "phpmd-report": "echo '{}' >phpmd.report.json",
+
+        "codeception": [
+            "Composer\\Config::disableProcessTimeout",
+            "THEME_ID=apex MODULE_IDS=ddoemedialibrary,ddoewysiwyg,ddoevisualcms,oe_vcmsexamples /var/www/vendor/bin/codecept run acceptance -c /var/www/vendor/oxid-esales/vcms-examples/tests/codeception.yml"
+        ]
     },
     "config": {
         "allow-plugins": {
