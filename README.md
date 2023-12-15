@@ -8,7 +8,7 @@ Example of each case is mentioned below.
 In case of creating your own Shortcode, check ``GoogleMap`` shortcode.
 
 ## Override an existing shortcode
-If you want to override an existing shortcode then ``Text`` shortcode.
+If you want to override an existing shortcode then check ``Text`` shortcode.
 
 ## Override a shortcode template
 If you want to override a template for an existing shortcode then check ``Column`` example in ``Services.yaml`` file.
