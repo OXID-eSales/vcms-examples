@@ -7,7 +7,7 @@
 
 declare(strict_types=1);
 
-namespace OxidEsales\VcmsExamples\Tests\Codeception;
+namespace OxidEsales\VcmsExamples\Tests\Codeception\Support;
 
 use Codeception\Util\Fixtures;
 use OxidEsales\Codeception\Admin\AdminLoginPage;
@@ -17,7 +17,7 @@ use OxidEsales\VcmsExamples\Tests\Codeception\_generated\AcceptanceTesterActions
 
 class AcceptanceTester extends \Codeception\Actor
 {
-    use AcceptanceTesterActions;
+	use _generated\AcceptanceTesterActions;
 
     /**
      * Open shop first page.

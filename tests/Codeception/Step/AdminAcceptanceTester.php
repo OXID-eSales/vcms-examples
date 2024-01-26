@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace OxidEsales\VcmsExamples\Tests\Codeception\Step;
 
-use OxidEsales\VcmsExamples\Tests\Codeception\AcceptanceTester;
+use OxidEsales\VcmsExamples\Tests\Codeception\Support\AcceptanceTester;
 use OxidEsales\VcmsExamples\Tests\Codeception\Page\VisualCmsPanel;
 
 /**
