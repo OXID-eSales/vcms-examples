@@ -17,7 +17,7 @@ use OxidEsales\VcmsExamples\Tests\Codeception\_generated\AcceptanceTesterActions
 
 class AcceptanceTester extends \Codeception\Actor
 {
-	use _generated\AcceptanceTesterActions;
+    use _generated\AcceptanceTesterActions;
 
     /**
      * Open shop first page.
