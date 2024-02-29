@@ -8,6 +8,7 @@
 namespace OxidEsales\VcmsExamples\ShortCode;
 
 use OxidEsales\EshopCommunity\Core\Registry;
+use OxidEsales\VisualCmsModule\DataType\OptionList;
 use OxidEsales\VisualCmsModule\Option\TextOption;
 use OxidEsales\VisualCmsModule\ShortCode\Text as TextParent;
 
@@ -15,13 +16,16 @@ class Text extends TextParent
 {
     protected string $template = '@oe_vcmsexamples/shortcodes/vcmsexamples_shortcode_text';
 
-    public function setOptions(array $options): void
+    public function getOptions(): OptionList
     {
         $shopLanguage = Registry::getLang();
+
+        $options = parent::getOptions();
+
         $options['heading'] = new TextOption(
             label: $shopLanguage->translateString('SHOP_MODULE_oevcmsexamples_TextWidget_Heading')
         );
 
-        parent::setOptions($options);
+        return $options;
     }
 }

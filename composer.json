@@ -38,7 +38,7 @@
     },
     "scripts": {
         "phpcs-report": "phpcs --standard=tests/phpcs.xml --report=json --report-file=phpcs.report.json",
-        "phpcs": "phpcs --standard=tests/phpcs.xml --report=full --report-file=phpcs.report.txt",
+        "phpcs": "phpcs --standard=tests/phpcs.xml --report=full",
         "phpcbf": "phpcbf --standard=tests/phpcs.xml",
 
         "phpstan": "phpstan --no-progress -ctests/PhpStan/phpstan.neon analyse src/ &>phpstan.report.txt",
