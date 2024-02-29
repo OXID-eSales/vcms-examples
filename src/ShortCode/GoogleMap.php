@@ -21,7 +21,7 @@ class GoogleMap extends BaseShortCode
     public function getMetadata(): ShortCodeMetadataInterface
     {
         return new ShortCodeMetadata(
-            shortCode: 'googlemap',
+            shortCodeTag: 'googlemap',
             isWidget: true,
             title: 'SHOP_MODULE_oevcmsexamples_ShortCode_GoogleMap',
             backgroundColor: '#e74c3c',
