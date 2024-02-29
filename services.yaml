@@ -19,3 +19,7 @@ services:
       $templates:
         column: '@@oe_vcmsexamples/shortcodes/vcmsexamples_shortcode_column'
     tags: [ 'shortcode.themeTemplates' ]
+
+  OxidEsales\VcmsExamples\DecorationExample:
+    decorates: OxidEsales\VisualCmsModule\ShortCode\Action
+    arguments: ['@.inner']
