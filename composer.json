@@ -24,8 +24,7 @@
         }
     ],
     "require": {
-        "php": ">=8.1",
-        "ddoe/visualcms-module": "*"
+        "php": ">=8.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -33,26 +32,31 @@
     "require-dev": {
         "squizlabs/php_codesniffer": "3.*",
         "phpstan/phpstan": "^1.8.11",
-        "phpunit/phpunit": "^9.6",
-        "oxid-esales/oxideshop-ce": "dev-b-7.0.x"
+        "oxid-esales/oxideshop-ce": "dev-b-7.0.x",
+        "codeception/codeception": "^5.0",
+        "codeception/module-asserts": "^3.0",
+        "codeception/module-db": "^3.0",
+        "codeception/module-filesystem": "^3.0",
+        "codeception/module-webdriver": "^4.0",
+        "oxid-esales/codeception-modules": "dev-b-7.1.x",
+        "oxid-esales/codeception-page-objects": "dev-b-7.1.x"
     },
     "scripts": {
         "phpcs-report": "phpcs --standard=tests/phpcs.xml --report=json --report-file=phpcs.report.json",
         "phpcs": "phpcs --standard=tests/phpcs.xml --report=full",
         "phpcbf": "phpcbf --standard=tests/phpcs.xml",
+
         "phpstan": "phpstan --no-progress -ctests/PhpStan/phpstan.neon analyse src/ &>phpstan.report.txt",
         "phpstan-report": "phpstan --no-progress -ctests/PhpStan/phpstan.neon analyse src/ --error-format=json >phpstan.report.json",
-        "phpmd": "echo 'phpmd check disabled' >phpmd.report.txt",
-        "phpmd-excludestaticaccess": "vendor/bin/phpmd src ansi tests/PhpMd/exclude-static-access-rule.xml",
-        "phpmd-report": "echo '{}' >phpmd.report.json",
+
         "codeception": [
             "Composer\\Config::disableProcessTimeout",
-            "THEME_ID=apex MODULE_IDS=ddoemedialibrary,ddoewysiwyg,ddoevisualcms,oe_vcmsexamples /var/www/vendor/bin/codecept run Acceptance -c /var/www/vendor/oxid-esales/vcms-examples/tests/codeception.yml"
+            "THEME_ID=apex MODULE_IDS=ddoemedialibrary,ddoewysiwyg,ddoevisualcms,oe_vcmsexamples SHOP_ROOT_PATH=/var/www/ vendor/bin/codecept run Acceptance -c tests/codeception.yml"
         ]
     },
     "config": {
         "allow-plugins": {
-            "oxid-esales/oxideshop-composer-plugin": true,
+            "oxid-esales/oxideshop-composer-plugin": false,
             "oxid-esales/oxideshop-unified-namespace-generator": true
         }
     }
