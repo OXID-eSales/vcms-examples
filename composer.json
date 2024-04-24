@@ -24,7 +24,8 @@
         }
     ],
     "require": {
-        "php": ">=8.1"
+        "php": ">=8.1",
+        "ddoe/visualcms-module": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -42,13 +43,9 @@
         "oxid-esales/codeception-page-objects": "dev-b-7.1.x"
     },
     "scripts": {
-        "phpcs-report": "phpcs --standard=tests/phpcs.xml --report=json --report-file=phpcs.report.json",
         "phpcs": "phpcs --standard=tests/phpcs.xml --report=full",
         "phpcbf": "phpcbf --standard=tests/phpcs.xml",
-
-        "phpstan": "phpstan --no-progress -ctests/PhpStan/phpstan.neon analyse src/ &>phpstan.report.txt",
-        "phpstan-report": "phpstan --no-progress -ctests/PhpStan/phpstan.neon analyse src/ --error-format=json >phpstan.report.json",
-
+        "phpstan": "phpstan --no-progress -ctests/PhpStan/phpstan.neon analyse src/",
         "codeception": [
             "Composer\\Config::disableProcessTimeout",
             "THEME_ID=apex MODULE_IDS=ddoemedialibrary,ddoewysiwyg,ddoevisualcms,oe_vcmsexamples SHOP_ROOT_PATH=/var/www/ vendor/bin/codecept run Acceptance -c tests/codeception.yml"
@@ -58,6 +55,12 @@
         "allow-plugins": {
             "oxid-esales/oxideshop-composer-plugin": false,
             "oxid-esales/oxideshop-unified-namespace-generator": true
+        }
+    },
+    "repositories": {
+        "ddoe/visualcms-module": {
+            "type": "git",
+            "url": "https://github.com/OXID-eSales/visual_cms_module.git"
         }
     }
 }
