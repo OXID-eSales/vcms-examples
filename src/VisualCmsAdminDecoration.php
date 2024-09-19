@@ -9,74 +9,21 @@ declare(strict_types=1);
 
 namespace OxidEsales\VcmsExamples;
 
-use OxidEsales\Eshop\Core\Controller\BaseController;
-use OxidEsales\VisualCmsModule\Controller\Admin\VisualCmsAdmin;
+use OxidEsales\EshopCommunity\Internal\Framework\Controller\AbstractControllerDecorator;
+use OxidEsales\VisualCmsModule\Controller\Admin\VisualCmsAdminInterface;
 
-class VisualCmsAdminDecoration extends BaseController
+class VisualCmsAdminDecoration extends AbstractControllerDecorator
 {
     public function __construct(
-        protected VisualCmsAdmin $visualCmsAdmin
+        protected VisualCmsAdminInterface $visualCmsAdmin
     ) {
+        parent::__construct($visualCmsAdmin);
 
+        echo $this->siegHello();
     }
 
-//    public function getClassKey()
-//    {
-//        return $this->visualCmsAdmin->getClassKey();
-//    }
-//
-//    public function setClassKey($classKey)
-//    {
-//        return $this->visualCmsAdmin->setClassKey($classKey);
-//    }
-//
-//    public function getFncName()
-//    {
-//        return $this->visualCmsAdmin->getFncName();
-//    }
-//
-//    public function setFncName($sFncName)
-//    {
-//        return $this->visualCmsAdmin->setFncName($sFncName);
-//    }
-//
-//    public function setViewParameters($aParams = null)
-//    {
-//        return $this->visualCmsAdmin->setViewParameters($aParams);
-//    }
-//
-//    public function init()
-//    {
-//        return $this->visualCmsAdmin->init();
-//    }
-//
-//    public function getViewId()
-//    {
-//        return $this->visualCmsAdmin->getViewId();
-//    }
-//
-//    public function executeFunction($sFunction)
-//    {
-//        return $this->visualCmsAdmin->executeFunction($sFunction);
-//    }
-//
-//    public function getIsCallForCache()
-//    {
-//        return $this->visualCmsAdmin->getIsCallForCache();
-//    }
-//
-//    public function render()
-//    {
-//        return $this->visualCmsAdmin->render();
-//    }
-//
-//    public function getViewData()
-//    {
-//        return $this->visualCmsAdmin->getViewData();
-//    }
-//
-//    public function setViewData($aViewData = null)
-//    {
-//        return $this->visualCmsAdmin->setViewData($aViewData);
-//    }
+    public function siegHello(): string
+    {
+        return $this->visualCmsAdmin->siegHello() . ' extended';
+    }
 }

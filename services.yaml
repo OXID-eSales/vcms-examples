@@ -23,7 +23,8 @@ services:
   OxidEsales\VcmsExamples\DecorationExample:
     decorates: OxidEsales\VisualCmsModule\ShortCode\Action
     arguments: ['@.inner']
-#
-#  OxidEsales\VcmsExamples\VisualCmsAdminDecoration:
-#    decorates: OxidEsales\VisualCmsModule\Controller\Admin\VisualCmsAdmin
-#    arguments: ['@.inner']
+
+  OxidEsales\VcmsExamples\VisualCmsAdminDecoration:
+    decorates: OxidEsales\VisualCmsModule\Controller\Admin\VisualCmsAdminInterface
+    arguments:
+      $visualCmsAdmin: '@.inner'
