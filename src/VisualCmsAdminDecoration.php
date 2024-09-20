@@ -15,15 +15,22 @@ use OxidEsales\VisualCmsModule\Controller\Admin\VisualCmsAdminInterface;
 class VisualCmsAdminDecoration extends AbstractControllerDecorator
 {
     public function __construct(
-        protected VisualCmsAdminInterface $visualCmsAdmin
+        VisualCmsAdminInterface $controller
     ) {
-        parent::__construct($visualCmsAdmin);
+        parent::__construct($controller);
 
-        echo $this->siegHello();
+//        $this->siegHello();
     }
 
     public function siegHello(): string
     {
-        return $this->visualCmsAdmin->siegHello() . ' extended';
+        die('in owerwrite');
+
+        return $this->controller->siegHello() . ' extended';
+    }
+
+    public function render()
+    {
+        return $this->controller->render();
     }
 }
