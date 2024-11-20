@@ -62,10 +62,10 @@ modules:
     - \OxidEsales\Codeception\Module\Translation\TranslationsModule:
         shop_path: '%SHOP_SOURCE_PATH%'
         paths:
-          - Application/views/admin_twig
-          - Application/views/apex
-          - ../vendor/oxid-esales/vcms-examples/views/admin_twig
-          - ../vendor/ddoe/visualcms-module/views/admin_twig
+          - 'Application/views/apex'
+          - 'Application/views/admin_twig'
+          - '../vendor/oxid-esales/vcms-examples/views/admin_twig'
+          - '../views/admin_twig'
     - \OxidEsales\Codeception\Module\OxideshopModules
 
 step_decorators:

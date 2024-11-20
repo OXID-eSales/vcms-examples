@@ -46,7 +46,7 @@
         "phpcs": "phpcs --standard=tests/phpcs.xml --report=full",
         "phpcbf": "phpcbf --standard=tests/phpcs.xml",
         "phpstan": "phpstan --no-progress -ctests/PhpStan/phpstan.neon analyse src/",
-        "codeception": [
+        "tests-codeception": [
             "Composer\\Config::disableProcessTimeout",
             "THEME_ID=apex MODULE_IDS=ddoemedialibrary,ddoewysiwyg,ddoevisualcms,oe_vcmsexamples SHOP_ROOT_PATH=/var/www/ vendor/bin/codecept run Acceptance -c tests/codeception.yml"
         ]
