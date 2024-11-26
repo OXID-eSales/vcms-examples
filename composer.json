@@ -25,7 +25,7 @@
     ],
     "require": {
         "php": ">=8.1",
-        "ddoe/visualcms-module": "*"
+        "ddoe/visualcms-module": "dev-b-7.3.x-Action-list-fix-OXDEV-8416"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
