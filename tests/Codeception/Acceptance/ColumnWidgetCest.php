@@ -10,7 +10,7 @@ declare(strict_types=1);
 namespace OxidEsales\VcmsExamples\Tests\Codeception\Acceptance;
 
 use OxidEsales\VcmsExamples\Tests\Codeception\Page\Widget\ColumnWidget;
-use OxidEsales\VcmsExamples\Tests\Codeception\Step\AdminAcceptanceTester;
+use OxidEsales\VisualCmsModule\Tests\Codeception\Step\AdminAcceptanceTester;
 
 /**
  * @group oe_vcmsexamples

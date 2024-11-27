@@ -9,7 +9,8 @@ declare(strict_types=1);
 
 namespace OxidEsales\VcmsExamples\Tests\Codeception\Page\Widget;
 
-use OxidEsales\VcmsExamples\Tests\Codeception\Step\AdminAcceptanceTester;
+use OxidEsales\VisualCmsModule\Tests\Codeception\Page\Widget\BaseWidget;
+use OxidEsales\VisualCmsModule\Tests\Codeception\Step\AdminAcceptanceTester;
 
 class GoogleMapWidget extends BaseWidget
 {

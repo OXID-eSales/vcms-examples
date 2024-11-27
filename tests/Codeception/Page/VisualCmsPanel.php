@@ -12,7 +12,7 @@ namespace OxidEsales\VcmsExamples\Tests\Codeception\Page;
 use OxidEsales\Codeception\Module\Translation\Translator;
 use OxidEsales\Codeception\Page\Page;
 use OxidEsales\VcmsExamples\Tests\Codeception\Page\Widget\BaseWidget;
-use OxidEsales\VcmsExamples\Tests\Codeception\Step\AdminAcceptanceTester;
+use OxidEsales\VisualCmsModule\Tests\Codeception\Step\AdminAcceptanceTester;
 use OxidEsales\VcmsExamples\Tests\Codeception\Page\Widget\ColumnWidget;
 
 class VisualCmsPanel extends Page
