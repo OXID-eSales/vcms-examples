@@ -7,6 +7,8 @@
 
 namespace OxidEsales\VcmsExamples;
 
+use OxidEsales\VisualCmsModule\ContentTree\DataType\ContentTree;
+use OxidEsales\VisualCmsModule\ContentTree\DataType\ContentTreeItemInterface;
 use OxidEsales\VisualCmsModule\DataType\OptionList;
 use OxidEsales\VisualCmsModule\DataType\ShortCodeMetadataInterface;
 use OxidEsales\VisualCmsModule\Option\TextOption;
@@ -45,8 +47,8 @@ class DecorationExample implements ShortCodeInterface
         return $originalOptions;
     }
 
-    public function prepareTemplateParams(string $content, array $params): array
+    public function prepareTemplateParams(ContentTreeItemInterface $contentTreeItem): array
     {
-        return $this->actionShortcode->prepareTemplateParams($content, $params);
+        return $this->actionShortcode->prepareTemplateParams($contentTreeItem);
     }
 }
