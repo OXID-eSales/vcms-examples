@@ -25,7 +25,8 @@ final class ActionWidgetCest
         $vcmsPanel = $I->openVisualCMSModule();
         $I->selectBaseFrame();
 
-        $vcmsPanel->addWidget(ActionWidget::class);
+        $row = $vcmsPanel->addRow();
+        $row->addWidget(ActionWidget::class);
 
         $I->waitForText('Old title is decorated now');
         $I->waitForText('New text option');

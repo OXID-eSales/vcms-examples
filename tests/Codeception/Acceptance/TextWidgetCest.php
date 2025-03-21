@@ -31,6 +31,7 @@ final class TextWidgetCest
         $cmsTitle = 'Text widget';
         $widgetHeading = 'Text Heading';
         $visualCmsPanel = $I->createCMSPage($cmsTitle);
+        $row = $visualCmsPanel->addRow();
 
         $widgetsData = [
             'text widget 1 content',
@@ -39,8 +40,7 @@ final class TextWidgetCest
 
         //Add widget to the grid
         foreach ($widgetsData as $widgetData) {
-            $visualCmsPanel
-                ->addWidget(TextWidget::class)
+            $row->addWidget(TextWidget::class)
                 ->addTextContent($widgetData)
                 ->addTextHeading($widgetHeading)
                 ->saveWidget();

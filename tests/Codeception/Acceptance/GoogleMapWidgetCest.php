@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace OxidEsales\VcmsExamples\Tests\Codeception\Acceptance;
 
+use OxidEsales\VcmsExamples\Tests\Codeception\Page\Widget\ActionWidget;
 use OxidEsales\VcmsExamples\Tests\Codeception\Page\Widget\GoogleMapWidget;
 use OxidEsales\VisualCmsModule\Tests\Codeception\Step\AdminAcceptanceTester;
 
@@ -40,8 +41,8 @@ final class GoogleMapWidgetCest
         ];
         $visualCmsPanel = $I->createCMSPage($cmsTitle);
 
-        $widget = $visualCmsPanel
-            ->addWidget(GoogleMapWidget::class)
+        $row = $visualCmsPanel->addRow();
+        $widget = $row->addWidget(GoogleMapWidget::class)
             ->fillData($widgetData);
 
         $widget->saveWidget();
