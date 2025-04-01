@@ -41,11 +41,11 @@ class GoogleMap extends BaseShortCode
             ),
             'height' => new TextOption(
                 label: $oLang->translateString('SHOP_MODULE_oevcmsexamples_GoogleMap_width'),
-                value: 450
+                value: '450'
             ),
             'width' => new TextOption(
                 label: $oLang->translateString('SHOP_MODULE_oevcmsexamples_GoogleMap_height'),
-                value: 600
+                value: '600'
             )
         ]);
     }
