@@ -19,11 +19,13 @@ class Text extends TextParent
     public function getOptions(): OptionList
     {
         $shopLanguage = Registry::getLang();
+        /** @var string $heading */
+        $heading = $shopLanguage->translateString('SHOP_MODULE_oevcmsexamples_TextWidget_Heading');
 
         $options = parent::getOptions();
 
         $options['heading'] = new TextOption(
-            label: $shopLanguage->translateString('SHOP_MODULE_oevcmsexamples_TextWidget_Heading')
+            label: $heading,
         );
 
         return $options;

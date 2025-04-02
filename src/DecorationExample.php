@@ -46,6 +46,9 @@ class DecorationExample implements ShortCodeInterface
         return $originalOptions;
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function prepareTemplateParams(ContentTreeItemInterface $contentTreeItem): array
     {
         return $this->actionShortcode->prepareTemplateParams($contentTreeItem);
