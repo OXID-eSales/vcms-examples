@@ -9,8 +9,8 @@ namespace OxidEsales\VcmsExamples\ShortCode;
 
 use OxidEsales\EshopCommunity\Core\Registry;
 use OxidEsales\VisualCmsModule\DataType\OptionList;
-use OxidEsales\VisualCmsModule\Option\TextOption;
-use OxidEsales\VisualCmsModule\ShortCode\Text as TextParent;
+use OxidEsales\VisualCmsModule\ShortCodeCollection\ShortCode\Text as TextParent;
+use OxidEsales\VisualCmsModule\ShortCodeCollection\Option\TextOption;
 
 class Text extends TextParent
 {

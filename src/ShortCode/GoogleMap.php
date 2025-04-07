@@ -11,8 +11,8 @@ use OxidEsales\EshopCommunity\Core\Registry;
 use OxidEsales\VisualCmsModule\DataType\OptionList;
 use OxidEsales\VisualCmsModule\DataType\ShortCodeMetadata;
 use OxidEsales\VisualCmsModule\DataType\ShortCodeMetadataInterface;
-use OxidEsales\VisualCmsModule\Option\TextOption;
-use OxidEsales\VisualCmsModule\ShortCode\BaseShortCode;
+use OxidEsales\VisualCmsModule\ShortCodeCollection\ShortCode\BaseShortCode;
+use OxidEsales\VisualCmsModule\ShortCodeCollection\Option\TextOption;
 
 class GoogleMap extends BaseShortCode
 {
