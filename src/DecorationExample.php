@@ -7,7 +7,7 @@
 
 namespace OxidEsales\VcmsExamples;
 
-use OxidEsales\VisualCmsModule\ContentTree\DataType\ContentTreeItemInterface;
+use OxidEsales\VisualCmsModule\Grid\DataType\ContentTreeItemInterface;
 use OxidEsales\VisualCmsModule\DataType\OptionList;
 use OxidEsales\VisualCmsModule\DataType\ShortCodeMetadataInterface;
 use OxidEsales\VisualCmsModule\Option\TextOption;
