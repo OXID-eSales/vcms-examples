@@ -9,7 +9,7 @@ namespace OxidEsales\VcmsExamples;
 
 use OxidEsales\VisualCmsModule\DataType\OptionList;
 use OxidEsales\VisualCmsModule\DataType\ShortCodeMetadataInterface;
-use OxidEsales\VisualCmsModule\Grid\DataType\ContentTreeItemInterface;
+use OxidEsales\VisualCmsModule\Grid\DataType\GridItemInterface;
 use OxidEsales\VisualCmsModule\ShortCodeCollection\ShortCode\Action\Action;
 use OxidEsales\VisualCmsModule\ShortCodeCollection\ShortCode\ShortCodeInterface;
 use OxidEsales\VisualCmsModule\ShortCodeCollection\Option\TextOption;
@@ -49,8 +49,8 @@ class DecorationExample implements ShortCodeInterface
     /**
      * @return array<string, mixed>
      */
-    public function prepareTemplateParams(ContentTreeItemInterface $contentTreeItem): array
+    public function prepareTemplateParams(GridItemInterface $gridItem): array
     {
-        return $this->actionShortcode->prepareTemplateParams($contentTreeItem);
+        return $this->actionShortcode->prepareTemplateParams($gridItem);
     }
 }
