@@ -14,9 +14,9 @@ use OxidEsales\VisualCmsModule\Tests\Codeception\Step\AdminAcceptanceTester;
 
 class GoogleMapWidget extends BaseWidget
 {
-    private $mapHeightElement = ".form-group[data-area='dd-type-googlemap'] #elm_widget_googlemap_height";
-    private $mapWidthElement = ".form-group[data-area='dd-type-googlemap'] #elm_widget_googlemap_width";
-    private $mapLinkElement = ".form-group[data-area='dd-type-googlemap'] #elm_widget_googlemap_link";
+    private $mapHeightElement = "div[data-area='dd-type-googlemap'] #elm_widget_googlemap_height";
+    private $mapWidthElement = "div[data-area='dd-type-googlemap'] #elm_widget_googlemap_width";
+    private $mapLinkElement = "div[data-area='dd-type-googlemap'] #elm_widget_googlemap_link";
     private $widgetIframe = "//div[contains(@class, 'dd-shortcode-googlemap')]//iframe";
     private $widgetIframeLink = "//div[contains(@class, 'dd-shortcode-googlemap')]//iframe[@src='%s']";
 

@@ -14,9 +14,9 @@ use OxidEsales\VisualCmsModule\Tests\Codeception\Step\AdminAcceptanceTester;
 
 class TextWidget extends BaseWidget
 {
-    private $inputContentElement = ".form-group[data-area='dd-type-text'] .note-editable";
+    private $inputContentElement = "div[data-area='dd-type-text'] .note-editable";
 
-    private $inputHeadingElement = ".form-group[data-area='dd-type-text'] #elm_widget_text_heading";
+    private $inputHeadingElement = "div[data-area='dd-type-text'] #elm_widget_text_heading";
 
     private $gridWidgetContent = "//div[contains(@class, 'dd-widget-type-text')][%d]//span[@class='dd-widget-preview']";
     private $widgetContent = "(//div[contains(@class, 'dd-shortcode-text')])[%d]";
