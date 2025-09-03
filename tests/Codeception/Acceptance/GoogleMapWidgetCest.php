@@ -53,6 +53,7 @@ final class GoogleMapWidgetCest
         $I->seeNumberOfElements("(//div[contains(@class, 'dd-shortcode-googlemap')])", 1);
 
         //Open page in frontend
+        $I->switchToWindow();
         $I->amOnPage('/google-map-widget');
         $I->dontSeeInTitle($visualCmsPanel->inTitle);
         $I->see($cmsTitle);

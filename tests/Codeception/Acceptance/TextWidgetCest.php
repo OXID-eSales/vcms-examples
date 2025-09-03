@@ -64,6 +64,7 @@ final class TextWidgetCest
         }
 
         //Open page in frontend
+        $I->switchToWindow();
         $I->amOnPage('/text-widget');
         $I->dontSeeInTitle($visualCmsPanel->inTitle);
         $I->see($cmsTitle);
