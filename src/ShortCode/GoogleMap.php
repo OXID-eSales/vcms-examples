@@ -25,7 +25,7 @@ class GoogleMap extends BaseShortCode
             isWidget: true,
             title: 'SHOP_MODULE_oevcmsexamples_ShortCode_GoogleMap',
             backgroundColor: '#e74c3c',
-            icon: 'fa-map',
+            icon: 'fa-solid fa-map',
         );
     }
 
