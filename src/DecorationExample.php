@@ -7,9 +7,9 @@
 
 namespace OxidEsales\VcmsExamples;
 
-use OxidEsales\VisualCmsModule\DataType\OptionList;
-use OxidEsales\VisualCmsModule\DataType\ShortCodeMetadataInterface;
-use OxidEsales\VisualCmsModule\Grid\DataType\GridItemInterface;
+use OxidEsales\VisualCmsModule\DTO\OptionList;
+use OxidEsales\VisualCmsModule\DTO\ShortCodeMetadataInterface;
+use OxidEsales\VisualCmsModule\Grid\DTO\GridItemInterface;
 use OxidEsales\VisualCmsModule\ShortCodeCollection\ShortCode\Action\Action;
 use OxidEsales\VisualCmsModule\ShortCodeCollection\ShortCode\ShortCodeInterface;
 use OxidEsales\VisualCmsModule\ShortCodeCollection\Option\TextOption;

@@ -8,9 +8,9 @@
 namespace OxidEsales\VcmsExamples\ShortCode;
 
 use OxidEsales\EshopCommunity\Core\Registry;
-use OxidEsales\VisualCmsModule\DataType\OptionList;
-use OxidEsales\VisualCmsModule\DataType\ShortCodeMetadata;
-use OxidEsales\VisualCmsModule\DataType\ShortCodeMetadataInterface;
+use OxidEsales\VisualCmsModule\DTO\OptionList;
+use OxidEsales\VisualCmsModule\DTO\ShortCodeMetadata;
+use OxidEsales\VisualCmsModule\DTO\ShortCodeMetadataInterface;
 use OxidEsales\VisualCmsModule\ShortCodeCollection\ShortCode\BaseShortCode;
 use OxidEsales\VisualCmsModule\ShortCodeCollection\Option\TextOption;
 

@@ -13,7 +13,7 @@ services:
     tags: [ 'visualcms.shortcode.tag.twig' ]
 
   vcmsTemplateOverrideForApexTheme:
-    class: OxidEsales\VisualCmsModule\DataType\ThemeTemplatesConfiguration
+    class: OxidEsales\VisualCmsModule\DTO\ThemeTemplatesConfiguration
     arguments:
       $themeId: 'apex'
       $templates:
