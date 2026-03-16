@@ -15,9 +15,8 @@ use OxidEsales\VisualCmsModule\Tests\Codeception\Step\AdminAcceptanceTester;
 class ColumnWidget
 {
     private $widgetShortCodeClass = "(//div[@class='dd-ve-content'] //div[contains(@class, 'dd-shortcode-column')])";
-	// @codingStandardsIgnoreStart
-	private $widgetAdditionalClass = "(//div[@class='dd-ve-content'] //div[@class='overriding-template-example'] //div[contains(@class, 'dd-shortcode-column')])";
-	// @codingStandardsIgnoreEnd
+    private $widgetAdditionalClass = "(//div[@class='dd-ve-content'] //div[@class='overriding-template-example'] //div[contains(@class, 'dd-shortcode-column')])"; // phpcs:ignore Generic.Files.LineLength
+
     private Actor $user;
 
     public function __construct(Actor $I)
