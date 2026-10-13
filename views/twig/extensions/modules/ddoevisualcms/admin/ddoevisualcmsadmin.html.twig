@@ -1,0 +1,7 @@
+{% extends "@ddoevisualcms/admin/ddoevisualcmsadmin.html.twig" %}
+
+{% block visualcms_scripts %}
+    <script type="module" src="{{ oViewConf.formJsFileUrl(oViewConf.getModuleUrl('oe_vcmsexamples', 'js/WidgetModalDecoration.js')) }}"></script>
+
+    {{ parent() }}
+{% endblock %}
