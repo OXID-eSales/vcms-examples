@@ -8,13 +8,13 @@ import {container} from 'tsyringe';
 /**
  * Example of decorating the VisualCMS widget modal.
  */
-container.afterResolution(Symbol.for('oevcms.widget.WidgetModalInterface'), (token, modal) => {
-    const open = modal.open.bind(modal);
+container.afterResolution(Symbol.for('oevcms.widget.WidgetModalInterface'), (token, service) => {
+    const originalOpen = service.open.bind(service);
 
-    modal.open = (callback) => {
+    service.open = (callback) => {
         console.log('VCMS examples: widget modal is opened');
 
-        open((widget) => {
+        originalOpen((widget) => {
             console.log(`VCMS examples: widget "${widget.widget}" is saved`, widget);
 
             callback(widget);
